@@ -15,7 +15,7 @@
         $stmt=$conn->prepare("INSERT INTO cow(reason,date,time,amount,Recieve,animal) values ('$reason','$date','$time','$amount','$Recieve','$animal')");
         $stmt->execute();
         echo "One transaction has been recorded!";
-        header("credit.html");
+        header(Location:credit.html');
         $stmt->close();
         $conn->close();
     }
