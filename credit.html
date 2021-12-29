@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Credit Page</title>
+<link rel="stylesheet" href="credit.css" type="text/css" /> 
+</head>
+
+<body bgcolor="lightblue">
+<div id="header" align="center"> Credit Form</div>
+<div class="form-content">
+  <h2><center>Please Enter the Credit Data</center></h2>
+  <form action="in.php" method="POST">
+    <table align="center" width="400" border="0" > 
+        
+      <tr>
+        <td>Reason:</td><td><textarea name="reason" pattern="^[A-Za-z\s]*$" class="textarea-field" required></textarea></td>
+      </tr>
+      <tr>
+          <td>Date</td> 
+          <td><div  class="input-group"><input type="date" name="date" min="2000-01-01" required></div>
+          </td> 
+        </tr>
+      <tr>
+          <td>Time</td>
+          <td><div  class="input-group"><input type="time" name="time" required></div>
+          </td>
+        </tr>
+      <tr>
+          <td>Amount</td>
+          <td><div  class="input-group"><input type="Number" min="0" name="amount" minrequired></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Recieve from</td>
+          <td><div  class="input-group"><input type="text" pattern="^[A-Za-z\s]*$"  name="Recieve" required></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Animal</td>
+          <td><div  class="input-group"><input type="text" pattern="^[A-Za-z\s]*$" name="animal" required></div>
+          </td>
+        </tr>
+        <tr><td></td><td><input type="submit" name="Submit" value="Submit" class="btn">
+        <a href="display.php">
+        <button type="button" onclick="redirectCreditPage()">Display</button></a>
+    </table>
+  </form>
+</div>
+
+<script>
+  function redirectCreditPage(){
+    location.replace("credit.html");
+  }
+</script>
+</body>
+</html>

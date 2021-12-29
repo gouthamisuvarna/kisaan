@@ -1,0 +1,53 @@
+<html>
+<head>
+
+<title>Debit Page</title>
+<link rel="stylesheet" href="debit.css" type="text/css" /> 
+
+</head>
+
+<body bgcolor="lightblue">
+<div id="header" align="center"> Debit Form</div>
+<div class="form-content">
+  <h2><center>Please Enter the Debit Data</center></h2>
+  <form action = "insertDebit.php" method="POST">
+    <table align="center" width="400" border="0">
+       
+        <tr>
+            <td>Date</td> 
+            <td><div  class="input-group"><input type="date" name="date" required></div></td> 
+        </tr>
+
+        <tr>
+            <td>Time</td>
+            <td><div  class="input-group"><input type="time" name="time" required></div></td>
+        </tr>
+
+        <tr>
+            <td>Amount</td>
+            <td><div  class="input-group"><input type="Number" min="0" name="amount" required></div></td>
+        </tr>
+
+        <tr>
+            <td>Reason</td><td><textarea name="reason" pattern="^[A-Za-z\s]*$" class="textarea-field" required></textarea></td>
+        </tr>
+
+        <tr>
+            <td>Given To</td>
+            <td><div  class="input-group"><input type="text" pattern="^[A-Za-z\s]*$"  name="sent" required></div></td>
+        </tr>
+
+        <tr>
+            <td>Animal</td>
+            <td><div  class="input-group"><input type="text" pattern="^[A-Za-z\s]*$" name="animal" required></div></td>
+        </tr>
+
+        <tr><td></td><td><input type="submit" name="Submit" value="Submit" class="btn">
+
+        <a href="debitdisplay.html">
+        <button type="button">Display</button></a>
+    </table>
+  </form>
+</div>
+</body>
+</html>
